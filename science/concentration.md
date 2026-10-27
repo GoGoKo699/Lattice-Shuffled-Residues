@@ -29,8 +29,8 @@ For one record, put
 
 ```math
 w=Ay,\qquad d=cs_2,\qquad
-h_i=\operatorname{HighBits}_q(w_i,\alpha),\qquad
-r_i=\operatorname{LowBits}_q(w_i-d_i,\alpha).
+h_i=\mathrm{HighBits}_q(w_i,\alpha),\qquad
+r_i=\mathrm{LowBits}_q(w_i-d_i,\alpha).
 ```
 
 All $`d_i`$ are regarded as integer coefficients and satisfy $`|d_i|\le\beta`$. The [boundary count](boundary_statistic.md) uses
@@ -193,11 +193,11 @@ B:=\tau\bigl((D-1)u+1\bigr)v+2\tau^2m_*^2.
 For a fixed challenge, subtraction of $`M_a^2`$ also gives
 
 ```math
-\operatorname{Var}(T\mid c)
+\mathrm{Var}(T\mid c)
 \le\tau\bigl((D-1)u+1\bigr)v+\tau^2m_*^2.
 ```
 
-For random challenges, the bound used in the sequel is the **second-moment** bound $`B`$. It holds for every challenge and therefore also after averaging over them. Averaging only the conditional variances would omit $`\operatorname{Var}_c(\mathbb E[T\mid c])`$.
+For random challenges, the bound used in the sequel is the **second-moment** bound $`B`$. It holds for every challenge and therefore also after averaging over them. Averaging only the conditional variances would omit $`\mathrm{Var}_c(\mathbb E[T\mid c])`$.
 
 The pointwise range is
 
@@ -273,7 +273,7 @@ Then for every secret coefficient $`s_j`$—with its block index suppressed—
 \begin{aligned}
 \mathbb E[Q_j\mid A]&=-\theta s_j+e_j,
 &|e_j|&\le p_z\tau D\beta\varepsilon,\\
-\operatorname{Var}(Q_j\mid A)&\le\mathbb E[Q_j^2\mid A]\le V,
+\mathrm{Var}(Q_j\mid A)&\le\mathbb E[Q_j^2\mid A]\le V,
 &|Q_j|&\le R.
 \end{aligned}
 }

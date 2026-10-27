@@ -7,10 +7,10 @@
 This project proves a correlation theorem for **anonymous residual histograms combined with indexed commitment high bits under a reused signing key**. In the [observation model](../science/model.md), the residual vector is
 
 ```math
-r=\operatorname{LowBits}(w-cs_2),
+r=\mathrm{LowBits}(w-cs_2),
 ```
 
-and the indexed information includes $`h=\operatorname{HighBits}(w)`$, the challenge $`c`$, and the first-check outcome. The histogram is available on the specified rejected attempts. Selected boundary counts are also determined on accepted attempts, where they vanish.
+and the indexed information includes $`h=\mathrm{HighBits}(w)`$, the challenge $`c`$, and the first-check outcome. The histogram is available on the specified rejected attempts. Selected boundary counts are also determined on accepted attempts, where they vanish.
 
 The [boundary statistic](../science/boundary_statistic.md) has an exact secret-dependent mean under the uniform comparison law. The [fixed-matrix theorem](../science/fixed_matrix.md) controls the required small marginals for one matrix reused across records, uniformly over translations of the nonce box. The [concentration theorem](../science/concentration.md) transfers the moments and gives a finite-observation identification guarantee. The [security analysis](../science/security_scope.md) derives a conditional obstruction to public-key-only simulation of repeated augmented transcripts. A separate [replacement-marginal calculation](../science/sampler_marginal.md) identifies a discrepancy in the corrected SUCRE replacement rule and explains the limits of a local repair.
 
@@ -69,9 +69,9 @@ Here $`\varepsilon_{\mathrm{zk}}`$ is negligible; classical or quantum distingui
 [SUCRE26corr](https://eprint.iacr.org/2026/2248), **Definition 5**, compares
 
 ```math
-D(vk,\operatorname{Trans}(sk,c))
+D(vk,\mathrm{Trans}(sk,c))
 \quad\text{and}\quad
-D(vk,\operatorname{Sim}(vk,c)),
+D(vk,\mathrm{Sim}(vk,c)),
 ```
 
 averaging over key generation and one uniform challenge. It does not give $`sk`$ to the distinguisher. This remains true in the corrected ePrint received on 28 September 2026, rather than only in the [journal version](https://doi.org/10.46586/tches.v2026.i1.618-659). The following Theorem 1 cites DFPS for the signing-query reduction. Section 5.2 represents shuffled values by frequency maps; Remark 1 explicitly distinguishes BAE+24's nonce/full-response exposure from SUCRE's rejected-value model.

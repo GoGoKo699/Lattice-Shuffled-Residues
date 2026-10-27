@@ -10,7 +10,7 @@ Let $`q`$ be an odd prime, let $`n\ge 2`$ be a power of two, and put
 
 ```math
 R_q=\mathbb F_q[X]/(X^n+1),\qquad
-A\leftarrow\operatorname{Unif}(R_q^{k\times\ell}),\qquad
+A\leftarrow\mathrm{Unif}(R_q^{k\times\ell}),\qquad
 D=kn,\qquad M=\ell n.
 ```
 
@@ -21,15 +21,15 @@ Fix sets $`\mathcal S_1,\ldots,\mathcal S_M\subseteq\mathbb F_q`$, each of cardi
 For distributions on a finite set, use the convention
 
 ```math
-\operatorname{TV}(P,Q)=\frac12\sum_x|P(x)-Q(x)|.
+\mathrm{TV}(P,Q)=\frac12\sum_x|P(x)-Q(x)|.
 ```
 
 For a set $`I`$ of $`r`$ distinct output positions, define
 
 ```math
 \delta_I(A)=
-\operatorname{TV}\!\left(
-\mathcal L((AZ)_I),\operatorname{Unif}(\mathbb F_q^r)
+\mathrm{TV}\!\left(
+\mathcal L((AZ)_I),\mathrm{Unif}(\mathbb F_q^r)
 \right),
 \qquad
 J_r=\frac{q^r-1}{q-1}.
@@ -61,9 +61,9 @@ Consequently, for every $`\varepsilon>0`$, define
 With probability at least $`1-\zeta_r(\varepsilon)`$ over the single draw of $`A`$, the following holds simultaneously for every set $`I`$ of at most $`r`$ output positions and every translation $`\boldsymbol b\in R_q^\ell`$:
 
 ```math
-\operatorname{TV}\!\left(
+\mathrm{TV}\!\left(
 \mathcal L((A(Z+\boldsymbol b))_I),
-\operatorname{Unif}(\mathbb F_q^{|I|})
+\mathrm{Unif}(\mathbb F_q^{|I|})
 \right)
 \le\varepsilon.
 ```
@@ -168,11 +168,11 @@ Lemma 3 bounds the probability of this particular projective relation by $`L^{-\
 
 ### From collisions to total variation
 
-For fixed $`A`$, let $`P_A`$ denote the law of $`(AZ)_I`$ and define its collision probability by $`\operatorname{CP}(P_A)=\sum_xP_A(x)^2`$. Independence of $`Z,Z'`$ gives
+For fixed $`A`$, let $`P_A`$ denote the law of $`(AZ)_I`$ and define its collision probability by $`\mathrm{CP}(P_A)=\sum_xP_A(x)^2`$. Independence of $`Z,Z'`$ gives
 
 ```math
 \begin{aligned}
-\mathbb E_A\operatorname{CP}(P_A)
+\mathbb E_A\mathrm{CP}(P_A)
 &=\mathbb E_\Delta q^{-\rho(\Delta)}\\
 &\le q^{-r}+J_rL^{-\ell\lceil n/r\rceil}.
 \end{aligned}
@@ -181,9 +181,9 @@ For fixed $`A`$, let $`P_A`$ denote the law of $`(AZ)_I`$ and define its collisi
 The bound uses collision probability $`q^{-r}`$ on full-rank differences and the upper bound $`1`$ on the exceptional differences. Cauchy–Schwarz gives the normalization
 
 ```math
-\operatorname{TV}(P_A,U)^2
+\mathrm{TV}(P_A,U)^2
 \le\frac{q^r}{4}\sum_x(P_A(x)-q^{-r})^2
-=\frac{q^r}{4}\bigl(\operatorname{CP}(P_A)-q^{-r}\bigr),
+=\frac{q^r}{4}\bigl(\mathrm{CP}(P_A)-q^{-r}\bigr),
 ```
 
 where $`U`$ is uniform on $`\mathbb F_q^r`$. Taking expectations proves the first assertion of Theorem 1.
@@ -261,7 +261,7 @@ The generic four-coordinate theorem is the load-bearing result. The smaller proj
 For a single output coordinate and any nonzero difference $`\Delta`$, that coordinate of $`A\Delta`$ is a nonzero linear functional of the relevant row of $`A`$. Indeed, the constant-coefficient pairing detects every nonzero polynomial component of $`\Delta`$. The exceptional event $`\Delta=0`$ has probability $`L^{-M}`$. Therefore
 
 ```math
-\mathbb E_A\operatorname{CP}(P_A)
+\mathbb E_A\mathrm{CP}(P_A)
 =q^{-1}+(1-q^{-1})L^{-M},
 \qquad
 \mathbb E_A\delta_I(A)^2
@@ -273,7 +273,7 @@ For a single output coordinate and any nonzero difference $`\Delta`$, that coord
 For $`\Delta\ne0`$, the two nonzero linear functionals involve independent matrix rows. Their joint collision probability is exactly $`q^{-2}`$. Hence
 
 ```math
-\mathbb E_A\operatorname{CP}(P_A)
+\mathbb E_A\mathrm{CP}(P_A)
 =q^{-2}+(1-q^{-2})L^{-M},
 \qquad
 \mathbb E_A\delta_I(A)^2

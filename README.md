@@ -50,7 +50,7 @@ L=2(\gamma_1-\beta)-1.
 For a fixed set $`I`$ of $`r`$ output positions, the proof establishes
 
 ```math
-\mathbb E_A\operatorname{TV}
+\mathbb E_A\mathrm{TV}
 \bigl((AZ)_I,U(\mathbb F_q^r)\bigr)^2
 \le
 \frac{q^r(q^r-1)}
