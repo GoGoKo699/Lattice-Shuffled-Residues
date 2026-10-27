@@ -1,0 +1,49 @@
+{
+  "scope": "Finite identity and bound checks; no signing or recovery experiment",
+  "scalar": {
+    "rounding_parameter_pairs": 16,
+    "boundary_joint_counts": 1210
+  },
+  "sparse_rank": {
+    "nonzero_sparse_polynomials": 7264
+  },
+  "challenge_covariance": {
+    "signed_weight_challenges": 24
+  },
+  "fourth_moment": {
+    "fourth_moment_cases": 3,
+    "independent_coordinate_tuples": 33643
+  },
+  "analytical_parameter_substitution": [
+    {
+      "shape": "44",
+      "beta": 78,
+      "z_pass_probability": "0.541471431117",
+      "second_moment_comparison_bound": "782.948841253",
+      "log2_observation_bound": "56.5387457497",
+      "sufficient_power_of_two": 57,
+      "log2_bad_matrix_bound": "-4157.38203034",
+      "scaled_mean_bias_bound": "3.93414841E-27"
+    },
+    {
+      "shape": "65",
+      "beta": 196,
+      "z_pass_probability": "0.618890913682",
+      "second_moment_comparison_bound": "21510.683000814",
+      "log2_observation_bound": "60.5126349683",
+      "sufficient_power_of_two": 61,
+      "log2_bad_matrix_bound": "-5947.08755719",
+      "scaled_mean_bias_bound": "1.48287132E-26"
+    },
+    {
+      "shape": "87",
+      "beta": 120,
+      "z_pass_probability": "0.662382184100",
+      "second_moment_comparison_bound": "8078.650230586",
+      "log2_observation_bound": "58.4509950444",
+      "sufficient_power_of_two": 59,
+      "log2_bad_matrix_bound": "-8505.45049111",
+      "scaled_mean_bias_bound": "1.21050720E-26"
+    }
+  ]
+}
