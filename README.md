@@ -13,10 +13,10 @@ The main result is an analytical identification theorem for the bounded error se
 | Result | Content | Authoritative account |
 |---|---|---|
 | A secret-dependent histogram correlation | A weighted boundary count, paired with indexed high bits and a signed challenge, has an exactly linear secret mean under the independent-coordinate comparison law. | [Boundary statistic](science/boundary_statistic.md) |
-| A theorem for one fixed matrix | Almost every uniform module matrix makes every marginal of at most four output coefficients close to uniform, simultaneously for all translations of the relevant product box. | [Fixed-matrix theorem](science/fixed_matrix.md) |
+| A theorem for one fixed matrix | With probability at least $`1-\zeta_4(\varepsilon)`$, one uniform module matrix controls every marginal of at most four output coefficients, simultaneously for all translations of the relevant product box. The exception bound is explicit. | [Fixed-matrix theorem](science/fixed_matrix.md) |
 | A finite observation guarantee | Exact mixed moments and Bernstein's inequality give an explicit sufficient count for simultaneous integer identification of all coefficients of $`s_2`$. | [Concentration](science/concentration.md) |
 | A simulation consequence | With the full public key and a full-column-rank matrix, the statistical result yields a publicly verifiable bounded witness. A computationally indistinguishable simulator for the joint repeated view would therefore solve that search problem. | [Security scope](science/security_scope.md) |
-| A separate one-transcript discrepancy | The replacement distribution in the corrected SUCRE assumption has an exact scalar probability deficit. A conditional-preimage construction repairs this marginal. | [Replacement marginal](science/sampler_marginal.md) |
+| A separate one-transcript discrepancy | The replacement distribution in the corrected SUCRE assumption has an exact scalar probability deficit. A conditional-preimage construction repairs the uniform-scalar marginal. | [Replacement marginal](science/sampler_marginal.md) |
 
 ### The observable mean
 
@@ -77,12 +77,15 @@ The counts are enormous and are not estimates of optimal sample complexity or pr
 
 Start with the [scientific overview](science/README.md) for the complete argument and its dependencies.
 
+- **Learn the project:** [Worked introduction](learning/README.md) → [Boneh–Shoup bridge](learning/ANCHOR.md) → [30-milestone map](learning/MILESTONES.md).
 - **Understand the observation:** [Model](science/model.md) → [Boundary statistic](science/boundary_statistic.md).
 - **Check the proof:** [Fixed matrix](science/fixed_matrix.md) → [Moments and concentration](science/concentration.md) → [Security consequence](science/security_scope.md).
 - **Audit the source comparison:** [Replacement marginal](science/sampler_marginal.md) → [Related work and versions](references/RELATED_WORK.md).
 - **Reproduce the finite checks:** [Verification guide](verification/README.md) and [recorded output](verification/results.json).
 
 The [structured bibliography](references/references.bib) records primary sources and distinct paper versions. [llms.txt](llms.txt) maps questions to their authoritative pages.
+
+The single educational anchor is **Boneh and Shoup, A Graduate Course in Applied Cryptography, version 0.6 (January 2023)**. The learning route uses selected sections and locally supplied derivations. Its ten foundation milestones assemble the experiment; twenty further milestones develop the mechanism, proof, and security consequence.
 
 ## Reproduction
 

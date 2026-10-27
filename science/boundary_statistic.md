@@ -15,18 +15,18 @@ p_0=\frac{\alpha+1}{q}.
 The zero high bin is the interval $`[-a,a]`$ represented modulo $`q`$. For every ordinary low value $`r\in(-a,a]`$, its $`p`$ distinct preimages are
 
 ```math
-x_j=\alpha j+r\pmod q,\qquad 0\le j<p.
+x_j=\alpha j+r\pmod q,\qquad 0\le j\lt p.
 ```
 
 The exceptional low value $`-a`$ has the unique preimage $`q-a`$. These facts can be checked directly in the definition of $`L_\alpha`$; they also account for all $`p\alpha+1=q`$ residues.
 
-Fix an integer shift $`d`$ with $`|d|\le\beta<a`$, and choose $`1\le v\le\beta`$. The event $`L_\alpha(w-d)=-a+v`$ has preimages
+Fix an integer shift $`d`$ with $`|d|\le\beta\lt a`$, and choose $`1\le v\le\beta`$. The event $`L_\alpha(w-d)=-a+v`$ has preimages
 
 ```math
-w_j=\alpha j-a+v+d\pmod q,\qquad 0\le j<p.
+w_j=\alpha j-a+v+d\pmod q,\qquad 0\le j\lt p.
 ```
 
-Put $`s=-a+v+d`$. Since $`-2a<s<a`$, only $`j=0`$ and $`j=1`$ can lie in the zero high bin. The former lies there exactly when $`s\ge-a`$; the latter exactly when $`s\le-a`$. Both occur precisely when $`s=-a`$, or $`d=-v`$. Every other $`j`$ lies outside that bin.
+Put $`s=-a+v+d`$. Since $`-2a\lt s\lt a`$, only $`j=0`$ and $`j=1`$ can lie in the zero high bin. The former lies there exactly when $`s\ge-a`$; the latter exactly when $`s\le-a`$. Both occur precisely when $`s=-a`$, or $`d=-v`$. Every other $`j`$ lies outside that bin.
 
 ### Boundary-count identity
 

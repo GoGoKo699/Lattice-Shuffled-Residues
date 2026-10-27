@@ -14,7 +14,7 @@ A\in R_q^{k\times\ell},\qquad
 t=As_1+s_2,
 ```
 
-and $`\|s_1\|_\infty,\|s_2\|_\infty\le\eta`$. Norms concern integer coefficient representatives. Assume $`2\eta<q`$, so these representatives are unique. Put $`D=kn`$ and $`M=\ell n`$.
+and $`\|s_1\|_\infty,\|s_2\|_\infty\le\eta`$. Norms concern integer coefficient representatives. Assume $`2\eta\lt q`$, so these representatives are unique. Put $`D=kn`$ and $`M=\ell n`$.
 
 Let $`\mathcal V_N(A,t;s_1,s_2)`$ be the joint law of $`N`$ independent first-attempt records under one fixed key, with the public information and censoring rule specified in the model. In this chapter, let $`\widehat s_2`$ denote the coefficientwise nearest-integer rounding of the real-valued estimates proved in [concentration](concentration.md). On the finite-marginal event $`\mathcal G_A`$, that result gives
 
@@ -68,7 +68,7 @@ In particular,
 ```math
 \delta_{\rm rk}:=\Pr[A\text{ is not injective}]
 \le n\sum_{j=0}^{\ell-1}q^{j-k}
-<\frac{nq^{\ell-k}}{q-1}.
+\lt \frac{nq^{\ell-k}}{q-1}.
 ```
 
 **Proof.** Expose the columns of a uniform field matrix in order. Conditional on $`j`$ independent columns, their span contains $`q^j`$ of the $`q^k`$ possible next columns. This gives the product for one factor. The Chinese remainder map is a bijection, so it sends uniform ring entries to independent uniform factor entries. Injectivity requires full column rank in every factor, proving (S1). A union bound and $`1-\prod_j(1-a_j)\le\sum_j a_j`$ give (S2). $`\square`$
@@ -80,7 +80,7 @@ More generally, for a squarefree factorization $`X^n+1=\prod_\nu f_\nu`$ with $`
 \left(1-q^{d_\nu(j-k)}\right).
 ```
 
-For odd $`q`$ and power-of-two $`n`$, squarefreeness holds because the characteristic does not divide $`n`$. The split case covers the parameter sets here. If $`k<\ell`$, this injectivity argument is unavailable, while the separate $`s_2`$ identification theorem still applies.
+For odd $`q`$ and power-of-two $`n`$, squarefreeness holds because the characteristic does not divide $`n`$. The split case covers the parameter sets here. If $`k\lt \ell`$, this injectivity argument is unavailable, while the separate $`s_2`$ identification theorem still applies.
 
 At $`q=8380417`$ and $`n=256`$, (S2) gives:
 

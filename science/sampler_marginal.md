@@ -38,7 +38,7 @@ The coordinate uses $`\tau`$ distinct secret coefficients. Challenge signs and n
 =\frac{1+\Pr(S_\tau=0)}2.
 ```
 
-Because $`|S_\tau|\le\beta<a`$,
+Because $`|S_\tau|\le\beta\lt a`$,
 
 ```math
 H(q-a+S_\tau)=0
@@ -82,7 +82,7 @@ The translated-box argument gives $`0\le\omega\le L^{-M}`$. If $`\gamma_1>2\beta
 
 For every fixed nonzero nonce vector $`y`$, each individual coefficient of $`Ay`$ is a nonzero linear functional of the independent coefficients of the corresponding row of $`A`$. It is therefore exactly uniform. No polynomial component of $`y`$ needs to be a unit.
 
-When $`y=0`$, the real high coefficient is zero with certainty. Its residual is $`L_\alpha(-(cs_2)_i)=-(cs_2)_i`$, an ordinary low value because $`|(cs_2)_i|\le\beta<a`$. The replacement then outputs a uniform high coefficient and is zero with probability $`1/p`$.
+When $`y=0`$, the real high coefficient is zero with certainty. Its residual is $`L_\alpha(-(cs_2)_i)=-(cs_2)_i`$, an ordinary low value because $`|(cs_2)_i|\le\beta\lt a`$. The replacement then outputs a uniform high coefficient and is zero with probability $`1/p`$.
 
 Consequently the real-minus-replacement acceptance-probability difference of the stated test is exactly
 
