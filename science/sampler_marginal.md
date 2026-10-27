@@ -8,13 +8,14 @@ The source is [SUCRE, corrected ePrint 2026/2248, Figure 7 and Definition 11](ht
 
 Use the [model's rounding convention](model.md#the-rounding-convention). In the real experiment the high coefficient is $`H((Ay)_i)`$. The residual hint is absent when the first check fails. When that check passes, the source's replacement rule draws a fresh independent dummy secret $`s'_2`$ and assigns
 
+**(S1)**
+
 ```math
 u_i=
 \begin{cases}
 H(q-a+(cs'_2)_i),&r_i=-a,\\
 U(\{0,\ldots,p-1\}),&r_i\ne-a.
 \end{cases}
-\tag{S1}
 ```
 
 The first-check event $`P_z`$ is visible: the residual hint is different from $`\bot`$ exactly on this event. Consider the test of $`P_z`$ together with a zero high coefficient.
@@ -46,21 +47,23 @@ H(q-a+S_\tau)=0
 
 Convolution with a probability mass function cannot increase the largest atom. Hence
 
+**(S2)**
+
 ```math
 \Pr(S_\tau=0)\le\frac1{2\eta+1},
 \qquad
 1-\theta\ge\frac{\eta}{2\eta+1}.
-\tag{S2}
 ```
 
 ## Uniform scalar comparison
 
 For a uniform field element $`w`$ and any fixed bounded shift, $`r=L_\alpha(w-d)`$ equals $`-a`$ with probability $`1/q`$. Thus the replacement rule has zero-high probability
 
+**(S3)**
+
 ```math
 \frac{1-1/q}{p}+\frac{\theta}{q}
 =\frac{\alpha+\theta}{q}.
-\tag{S3}
 ```
 
 The real probability is $`(\alpha+1)/q`$. The deficit is $`(1-\theta)/q`$.
@@ -83,6 +86,8 @@ When $`y=0`$, the real high coefficient is zero with certainty. Its residual is 
 
 Consequently the real-minus-replacement acceptance-probability difference of the stated test is exactly
 
+**(S4)**
+
 ```math
 \boxed{
 \Delta_{\mathrm{marg}}
@@ -91,10 +96,11 @@ Consequently the real-minus-replacement acceptance-probability difference of the
 +\omega\left(1-\frac1p\right)
 \right].
 }
-\tag{S4}
 ```
 
 Since $`1-1/p\ge(1-\theta)/q`$, (S2) gives
+
+**(S5)**
 
 ```math
 \boxed{
@@ -102,7 +108,6 @@ Since $`1-1/p\ge(1-\theta)/q`$, (S2) gives
 \ge
 \frac{p_z\eta}{(2\eta+1)q}.
 }
-\tag{S5}
 ```
 
 This is an exact lower bound in the single-transcript random-matrix experiment, even after the two experiments retain their common public key and shuffled hints: the test simply ignores the additional coordinates.
@@ -113,11 +118,12 @@ For parameter families with polynomially bounded $`q`$ and inverse-polynomial $`
 
 The correct conditional high distribution for a prescribed ordinary residual $`r`$ and dummy shift $`d'`$ can be defined by the exact preimage fiber:
 
+**(S6)**
+
 ```math
 J\leftarrow U(\{0,\ldots,p-1\}),
 \qquad
 u=H(\alpha J+r+d'\pmod q).
-\tag{S6}
 ```
 
 For the exceptional residual $`r=-a`$, the unique preimage gives

@@ -32,17 +32,19 @@ Put $`s=-a+v+d`$. Since $`-2a<s<a`$, only $`j=0`$ and $`j=1`$ can lie in the zer
 
 For uniform $`w\in\mathbb F_q`$,
 
+**(B1)**
+
 ```math
 \Pr\{H(w)=0,\ L_\alpha(w-d)=-a+v\}
 =\frac{1+\mathbf1_{\{d=-v\}}}{q},
-\tag{B1}
 ```
 
 whereas
 
+**(B2)**
+
 ```math
 \Pr\{L_\alpha(w-d)=-a+v\}=\frac pq.
-\tag{B2}
 ```
 
 The extra joint preimage occurs at a shifted rounding endpoint. It is not an inference about an unknown permutation.
@@ -82,12 +84,13 @@ Let $`f(w)=\mathbf1_{\{H(w)=0\}}-p_0`$. Equations (B1) and (B2) give
 
 Subtracting the product of the marginal means yields
 
+**(B3)**
+
 ```math
 \boxed{
 \mathbb E[f(w)(g(L_\alpha(w-d))-\mu)]
 =\frac{(-d)_+}{q}-K.
 }
-\tag{B3}
 ```
 
 Here $`x_+=\max(x,0)`$. The constant term follows from $`p\alpha=q-1`$. This count is elementary arithmetic of the standard decomposition; the statistical use of it is the point of the construction.
@@ -105,10 +108,11 @@ The value of $`F`$ is a weighted histogram count and is unchanged by any permuta
 
 Temporarily use the comparison law in which the coordinates of $`w`$ are independent and uniform, conditional on $`c`$. Write $`d=cs_2`$ and $`f_i=\mathbf1_{\{h_i=0\}}-p_0`$. For a fixed coordinate $`i`$,
 
+**(B4)**
+
 ```math
 \mathbb E[f_iF_c\mid c]
 =\frac{(-d_i)_+}{q}-K.
-\tag{B4}
 ```
 
 Indeed, every off-diagonal term in $`f_i\sum_j(g(r_j)-\mu)`$ has zero expectation by independence of the two coordinates and their centered marginal means. The remaining term is (B3).
@@ -119,10 +123,11 @@ No location for a particular residual value is identified. The indexed high coef
 
 Let $`C(c)`$ be the $`n\times n`$ integer matrix of multiplication by $`c`$ in $`R`$. Every column has exactly $`\tau`$ entries in $`\{-1,1\}`$. For a fixed output module block $`b`$ and secret coefficient $`j`$, define
 
+**(B5)**
+
 ```math
 T_{b,j}
 =F_c\sum_{i=0}^{n-1}C(c)_{i,j}f_{bn+i}.
-\tag{B5}
 ```
 
 Under the comparison law, (B4) gives
@@ -135,33 +140,36 @@ Under the comparison law, (B4) gives
 
 The challenge distribution is invariant under $`c\mapsto-c`$. Both $`C(c)_{i,j}`$ and $`(cs_{2,b})_i`$ change sign under this map. Therefore
 
+**(B6)**
+
 ```math
 \mathbb E_c[C(c)_{i,j}(-(cs_{2,b})_i)_+]
 =-\frac12\mathbb E_c[C(c)_{i,j}(cs_{2,b})_i].
-\tag{B6}
 ```
 
 To see the sign, average the expression for $`c`$ with that for $`-c`$ and use $`(-x)_+-x_+=-x`$.
 
 For signed weight-$`\tau`$ challenges,
 
+**(B7)**
+
 ```math
 \mathbb E[c_u c_v]=\frac{\tau}{n}\mathbf1_{\{u=v\}},
 \qquad
 \mathbb E[C(c)^TC(c)]=\tau I_n.
-\tag{B7}
 ```
 
 The first identity follows by conditioning on the support and averaging the independent signs. Each row of $`C(c)`$ is a signed permutation of the coefficient vector, so summing its covariance over the $`n`$ rows proves the second. Also $`\mathbb E C(c)=0`$.
 
 Combining (B6) and (B7) cancels the constant $`K`$ and gives the exact comparison mean:
 
+**(B8)**
+
 ```math
 \boxed{
 \mathbb E T_{b,j}
 =-\frac{\tau}{2q}(s_{2,b})_j.
 }
-\tag{B8}
 ```
 
 The identity holds for every secret with the stated coefficient bound. It identifies a signed coefficient with a known scale; there is no unknown global sign or normalization.
@@ -182,9 +190,10 @@ F_c=-D\mu.
 
 The statistic must retain this centered contribution on accepted attempts whose first check passed. Omitting those records would change its mean. On a first-check rejection, define the entire observation statistic to be zero:
 
+**(B9)**
+
 ```math
 Q_{b,j}=\mathbf1_{P_z}T_{b,j}.
-\tag{B9}
 ```
 
 This convention requires neither an unavailable low vector nor conditioning on the final rejection event.
@@ -201,13 +210,14 @@ Expand (B5) into at most $`\tau D`$ summands, each a product $`f_i(g(r_j)-\mu)`$
 
 The expectation of a function of range width $`b`$ changes by at most $`b\varepsilon`$ under total variation distance $`\varepsilon`$. Therefore, for every such fixed matrix and every pair of bounded secrets,
 
+**(B10)**
+
 ```math
 \left|
 \mathbb E[Q_{b,j}\mid A,s_1,s_2]
 +\frac{p_z\tau}{2q}(s_{2,b})_j
 \right|
 \le p_z\tau D\beta\varepsilon.
-\tag{B10}
 ```
 
 The challenge remains uniform after the first check, and its conditional nonce is a translated box, as proved in the [model](model.md#exact-conditioning-on-the-first-check). Thus the same good-matrix event applies throughout the challenge average.

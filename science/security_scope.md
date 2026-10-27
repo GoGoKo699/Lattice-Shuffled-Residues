@@ -54,19 +54,21 @@ R_q\cong\prod_{\nu=1}^{n}\mathbb F_q.
 
 For uniform $`A`$, its images $`A_\nu\in\mathbb F_q^{k\times\ell}`$ are independent uniform matrices. Therefore
 
+**(S1)**
+
 ```math
 \Pr[A\text{ is injective}]
 =\left(\prod_{j=0}^{\ell-1}(1-q^{j-k})\right)^n.
-\tag{S1}
 ```
 
 In particular,
+
+**(S2)**
 
 ```math
 \delta_{\rm rk}:=\Pr[A\text{ is not injective}]
 \le n\sum_{j=0}^{\ell-1}q^{j-k}
 <\frac{nq^{\ell-k}}{q-1}.
-\tag{S2}
 ```
 
 **Proof.** Expose the columns of a uniform field matrix in order. Conditional on $`j`$ independent columns, their span contains $`q^j`$ of the $`q^k`$ possible next columns. This gives the product for one factor. The Chinese remainder map is a bijection, so it sends uniform ring entries to independent uniform factor entries. Injectivity requires full column rank in every factor, proving (S1). A union bound and $`1-\prod_j(1-a_j)\le\sum_j a_j`$ give (S2). $`\square`$
@@ -94,10 +96,11 @@ These are small concrete failure probabilities. They need not be negligible in e
 
 Under the statistical theorem and the full-key convention,
 
+**(S3)**
+
 ```math
 \Pr[(\widehat s_1,\widehat s_2)=(s_1,s_2)]
 \ge1-\delta-\delta_A-\delta_{\rm rk}.
-\tag{S3}
 ```
 
 No independence between the matrix events is required. If the actual joint key-and-view law is within total variation $`\xi_N`$ of the ideal law, subtract $`\xi_N`$ as well. That approximation must cover the repeated joint experiment; an unspecified approximation for one sample is insufficient.
@@ -106,6 +109,8 @@ No independence between the matrix events is required. If the actual joint key-a
 
 An indistinguishability test must operate without the original secret. Define
 
+**(S4)**
+
 ```math
 \mathcal W_\eta(A,t)=
 \left\{(u,v):
@@ -113,18 +118,18 @@ Au+v=t,\quad
 \|u\|_\infty\le\eta,\quad
 \|v\|_\infty\le\eta
 \right\},
-\tag{S4}
 ```
 
 where $`u\in R_q^\ell`$ and $`v\in R_q^k`$. Membership is publicly decidable by the ring equation and coefficient bounds. The bounded-witness search problem asks for **any** member of this set under the stated public-key distribution, rather than equality with the key generator's original draw.
 
 Let $`\mathsf E_N`$ be the identification estimator followed by linear completion and public validation. It first rejects records outside the public format, coefficient ranges, challenge set, or allowed censoring patterns; this keeps its resource bound valid on simulated inputs as well. It returns $`\bot`$ on an invalid candidate, an inconsistent equation, or a noninjective matrix. On genuine views it returns a valid bounded witness with the probability in (S3). Thus
 
+**(S5)**
+
 ```math
 \mathsf D(A,t,V)
 =
 \mathbf1\{\mathsf E_N(A,t,V)\in\mathcal W_\eta(A,t)\}
-\tag{S5}
 ```
 
 is a public, efficiently decidable event. A different bounded witness also counts as success for the defined search problem.
@@ -139,10 +144,11 @@ Let $`\varepsilon_{\rm BW}(T)`$ be the maximum success probability of a time-$`T
 
 If $`\mathsf{Sim}_N`$ runs in time $`T_{\rm sim}`$ and $`\mathsf E_N`$ in time $`T_{\rm ext}`$, the public test (S5) has distinguishing advantage at least
 
+**(S6)**
+
 ```math
 1-\delta-\delta_A-\delta_{\rm rk}
 -\varepsilon_{\rm BW}(T_{\rm sim}+T_{\rm ext})
-\tag{S6}
 ```
 
 between genuine and simulated repeated views. Subtract an additional $`\xi_N`$ under the source approximation following (S3).
@@ -163,21 +169,23 @@ For an asymptotic consequence, $`N`$ and total processing must be polynomial in 
 
 Consider the decision problem
 
+**(S7)**
+
 ```math
 (A,As_1+s_2)
 \quad\text{versus}\quad
 (A,U),\qquad U\leftarrow U(R_q^k),
-\tag{S7}
 ```
 
 with the exact secret and error distributions specified and supported coefficientwise in $`[-\eta,\eta]`$. For every fixed $`A`$, at most $`(2\eta+1)^{M+D}`$ different vectors $`t`$ can arise from bounded pairs. Therefore
+
+**(S8)**
 
 ```math
 \Pr_U[\mathcal W_\eta(A,U)\ne\varnothing]
 \le
 \rho_{\rm wit}:=
 \min\left\{1,\frac{(2\eta+1)^{M+D}}{q^D}\right\}.
-\tag{S8}
 ```
 
 A bounded-witness solver with real-instance success $`p_{\rm BW}`$, followed by public validation, distinguishes (S7) with advantage at least $`p_{\rm BW}-\rho_{\rm wit}`$. Thus the corresponding bounded-secret decisional Module-LWE assumption implies bounded-witness search hardness whenever the support bound is negligible.
@@ -218,10 +226,11 @@ Equal commitments under different message prefixes do not reuse the same input. 
 
 If messages are compressed to independent uniform $`\kappa`$-bit prefixes, distinct messages do not guarantee distinct prefixes. The analysis must then include
 
+**(S9)**
+
 ```math
 \Pr[\text{prefix collision}]
 \le\frac{N(N-1)}{2^{\kappa+1}}.
-\tag{S9}
 ```
 
 For $`N\le2^{61}`$, this is at most $`2^{-135}`$ at $`\kappa=256`$ and $`2^{-391}`$ at $`\kappa=512`$, conditional on that prefix model. Matrix expansion, deterministic nonce derivation, finite counters, and other seeded mechanisms require their actual source and domain-separation assumptions. A theorem for uniform $`A`$ is not automatically a statistical theorem for every fixed finite seed family.
@@ -234,13 +243,14 @@ With one first record retained per request, $`N`$ records require $`N`$ signing 
 
 The statistic can be represented exactly, so identifying a small mean does not require an uncharged real-arithmetic operation. On a first-check-passing record, write
 
+**(S10)**
+
 ```math
 \mathsf{num}_{b,j}
 =
 (qF-DpS_1)
 \sum_{i=0}^{n-1}C(c)_{i,j}
 \left(q\mathbf1_{\{h_{bn+i}=0\}}-(\alpha+1)\right).
-\tag{S10}
 ```
 
 Set this numerator to zero on a first-check rejection. Since $`\mu=pS_1/q`$ and $`p_0=(\alpha+1)/q`$, the observed quantity is exactly $`Q_{b,j}=\mathsf{num}_{b,j}/q^2`$. With $`R=\tau D\beta`$ from the [concentration proof](concentration.md),
@@ -251,11 +261,12 @@ Set this numerator to zero on a first-check rejection. Since $`\mu=pS_1/q`$ and 
 
 Every signed sum of $`N`$ numerators can therefore be represented with
 
+**(S11)**
+
 ```math
 b_{\rm acc}
 =
 \left\lceil\log_2(2Nq^2R+1)\right\rceil
-\tag{S11}
 ```
 
 bits. The histogram weight can be formed by scanning the $`D`$ observed residues or a sparse histogram with at most $`D`$ nonzero entries. Direct accumulation of all coefficient statistics uses $`O(ND\tau)`$ integer operations. Charging each conservatively at schoolbook cost gives $`O(ND\tau b_{\rm acc}^2)`$ bit operations.
@@ -264,15 +275,18 @@ There are $`D`$ accumulators, using $`O(Db_{\rm acc})`$ bits. One-record input b
 
 Let $`\mathsf{sum}_{b,j}`$ be the accumulated integer numerator. Before nearest-integer rounding, the real-valued estimate is the exact rational expression
 
+**(S12)**
+
 ```math
 \widetilde s_{b,j}
 =
 -\frac{2\,\mathsf{sum}_{b,j}(2\gamma_1)^M}
 {NqL^M\tau}.
-\tag{S12}
 ```
 
 Its numerator and denominator have bit lengths at most
+
+**(S13)**
 
 ```math
 b_{\rm fin}
@@ -282,7 +296,6 @@ b_{\rm acc}
 +M\log_2(2\gamma_1)
 +\log_2(Nq\tau)
 \right).
-\tag{S13}
 ```
 
 The common integer powers can be formed with $`O(\log(M+1))`$ schoolbook multiplications at this length. The $`D`$ final nearest-integer decisions can use exact integer division and remainder comparisons. A conservative total for these operations is $`O((D+\log(M+1))b_{\rm fin}^2)`$ bit operations and $`O(Db_{\rm acc}+b_{\rm fin})`$ working bits, apart from the input and matrix storage.
