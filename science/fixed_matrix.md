@@ -1,6 +1,6 @@
 # Small marginals for one fixed public matrix
 
-The public matrix is sampled once and reused across records. This page proves that, for almost every such matrix, any four specified coefficients of a box product are statistically close to independent uniform field elements. The same matrix works for every translation of the box. That last property handles conditioning on the first rejection check, whose effect is to translate a smaller box by a secret-dependent amount.
+The public matrix is sampled once and reused across records. This page gives an explicit probability bound for the event that all required four-coordinate marginals of a box product are statistically close to independent uniform field elements. On that event, the same matrix works for every translation of the box. That last property handles conditioning on the first rejection check, whose effect is to translate a smaller box by a secret-dependent amount. The matrix-exception bound is tiny at the displayed parameter shapes.
 
 The [boundary statistic](boundary_statistic.md) uses two-coordinate marginals for its mean. The [concentration argument](concentration.md) uses four-coordinate marginals for its second moment. Neither argument assumes that the complete product vector is uniform: its entropy may be insufficient for that stronger assertion.
 
@@ -69,6 +69,20 @@ With probability at least $`1-\zeta_r(\varepsilon)`$ over the single draw of $`A
 ```
 
 The translation may depend on the matrix, challenge, or secrets. The assertion is pointwise in the translation once $`A`$ satisfies the stated event. It does not assert simultaneous control of every possible choice of the base sets $`\mathcal S_i`$.
+
+### When the bound is informative
+
+The guarantee is useful when $`\zeta_r(\varepsilon)`$ is small. Its definition permits the value one, so a near-universal statement about matrices requires the actual parameters. For an asymptotic family indexed by a security parameter $`\lambda`$, a sufficient condition for negligible four-coordinate exception probability is
+
+```math
+\ell\lceil n/4\rceil\log_2 L
+-\log_2\!\left(
+\frac{\binom D4 q^4J_4}{4\varepsilon^2}
+\right)
+=\omega(\log\lambda).
+```
+
+The notation $`\omega(\log\lambda)`$ means that the ratio to $`\log\lambda`$ tends to infinity. If $`q,D,\varepsilon^{-1}`$ are polynomially bounded in $`\lambda`$, it suffices that $`\ell\lceil n/4\rceil\log_2L=\omega(\log\lambda)`$. The finite theorem and its numerical table retain their explicit exception probabilities without requiring an asymptotic interpretation.
 
 ## 2. The coefficient pairing and the negacyclic signs
 

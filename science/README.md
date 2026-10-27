@@ -13,7 +13,7 @@ Here the anonymous data are low-part rounding residuals. The indexed data are co
 | [3. Fixed public matrix](fixed_matrix.md) | Does the calculation survive matrix reuse and conditioning? | Sparse multiplication rank and a collision argument control every required small marginal for the same matrix and every translation. |
 | [4. Concentration](concentration.md) | How many records are sufficient? | Exact fourth moments, transfer errors, and Bernstein's inequality give simultaneous integer identification with explicit failure terms. |
 | [5. Security scope](security_scope.md) | What follows about public-key simulation? | Full-key completion and public witness validation turn repeated-view simulation into bounded-witness search, with explicit costs and rank exceptions. |
-| [6. Replacement marginal](sampler_marginal.md) | Does the source's particular one-view replacement even match a scalar marginal? | Its zero-high probability has an exact deficit. Sampling from the correct conditional preimage fiber repairs this isolated issue. |
+| [6. Replacement marginal](sampler_marginal.md) | Does the source's particular one-view replacement even match a scalar marginal? | Its zero-high probability has an exact deficit. Sampling from the correct conditional preimage fiber repairs the uniform-scalar marginal. |
 
 ## Three distributions to keep distinct
 
@@ -73,3 +73,5 @@ This distinction prevents a change of sampling law from being hidden inside the 
 The theorem demonstrates persistent correlation in a defined enlarged leakage view. The quantitative sufficient counts are very large. Physical acquisition, trace noise, partial observation, and a standard compressed verification key require additional arguments. The [security chapter](security_scope.md) accounts for signer cost, statistical processing, exact arithmetic, storage, and the rank exception; it also separates a missing proof hypothesis from a false hardness premise.
 
 The [related-work account](../references/RELATED_WORK.md) credits prior shuffled-information inference and explains the remaining comparison limits. The [verification guide](../verification/README.md) connects each finite calculation to the analytical claim it checks.
+
+For a gradual entry, the [learning introduction](../learning/README.md) works through a small rounding example. The [Boneh–Shoup bridge](../learning/ANCHOR.md) and [30-milestone map](../learning/MILESTONES.md) connect the necessary foundations to this scientific account.

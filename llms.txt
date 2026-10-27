@@ -6,11 +6,16 @@
 
 - [Project overview](README.md): scientific question, principal results, quantitative scale, reproduction, and scope.
 - [Connected scientific account](science/README.md): proof dependencies and the role of each distribution.
+- [Learning introduction](learning/README.md): a complete scalar example and a route through the project.
+- [Local foundations](learning/FOUNDATIONS.md): finite fields, negacyclic modules, rank and fibers, moments, conditioning, total variation, and bounded witnesses.
+- [Selected anchor and bridge](learning/ANCHOR.md): Boneh–Shoup v0.6, verified section pointers, notation, and the material supplied locally.
+- [Thirty milestones](learning/MILESTONES.md): the project-defined common map, M01–M10 foundations and M11–M30 scientific narrative.
 - [Related work](references/RELATED_WORK.md): closest comparisons, original and corrected source versions, and unresolved full-text overlap checks.
 - [Bibliography](references/references.bib): structured primary-source records.
 
 ## Questions and authoritative pages
 
+- How should a new reader enter the project? Read the [worked introduction](learning/README.md), use the [single-anchor bridge](learning/ANCHOR.md), and follow the [milestone dependencies](learning/MILESTONES.md). The map organizes the project's understanding targets rather than the book's full contents.
 - What information is visible? Read [Model](science/model.md), especially the enlarged view, exact first-check conditioning, and fresh first-attempt strategy.
 - Why can an anonymous histogram retain a secret-dependent correlation? Read [Boundary statistic](science/boundary_statistic.md), equations (B1)–(B10).
 - Is the public matrix redrawn for each record? No. Read [Fixed public matrix](science/fixed_matrix.md) for a one-time matrix draw and simultaneous control of all translations of one fixed product box.
