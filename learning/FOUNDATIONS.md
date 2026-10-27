@@ -12,7 +12,7 @@ Working modulo a positive integer $`q`$ identifies integers whose difference is 
 
 For example, $`12`$ and $`-1`$ denote the same residue modulo $`13`$. They are different integers. A claim about the size of a secret coefficient must specify its integer representative.
 
-When $`q`$ is prime, residues form the finite field $`\mathbb F_q`$: addition and multiplication are performed modulo $`q`$, and every nonzero residue has a multiplicative inverse. Linear equations over this field use modular arithmetic. Integer bounds such as $`|s_j|\le\eta`$ refer to the chosen small integer coefficients before reduction. If $`2\eta<q`$, each allowed integer has a distinct field image.
+When $`q`$ is prime, residues form the finite field $`\mathbb F_q`$: addition and multiplication are performed modulo $`q`$, and every nonzero residue has a multiplicative inverse. Linear equations over this field use modular arithmetic. Integer bounds such as $`|s_j|\le\eta`$ refer to the chosen small integer coefficients before reduction. If $`2\eta\lt q`$, each allowed integer has a distinct field image.
 
 The low-part function $`L_\alpha`$ in this project uses its own rounding interval and endpoint convention. A centered field representative and a low rounding remainder are therefore separate definitions; the [model](../science/model.md#the-rounding-convention) specifies the latter.
 

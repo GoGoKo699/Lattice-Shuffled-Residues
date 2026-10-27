@@ -34,7 +34,7 @@ Choose an even $`\alpha`$ and an integer $`p\ge2`$ such that
 q=p\alpha+1,\qquad a=\alpha/2.
 ```
 
-The challenge set $`\mathcal B_\tau`$ consists of polynomials with exactly $`\tau`$ nonzero coefficients, each independently signed, for $`1\le\tau\le n`$. Put $`\beta=\eta\tau`$ and assume $`\beta<a`$. The nonce bound $`\gamma_1`$ is an integer satisfying
+The challenge set $`\mathcal B_\tau`$ consists of polynomials with exactly $`\tau`$ nonzero coefficients, each independently signed, for $`1\le\tau\le n`$. Put $`\beta=\eta\tau`$ and assume $`\beta\lt a`$. The nonce bound $`\gamma_1`$ is an integer satisfying
 
 ```math
 \gamma_1>\beta,\qquad
@@ -102,10 +102,10 @@ The high and low functions act coefficientwise. All coefficients of $`cs_1`$ and
 Let $`P_z`$ denote the event
 
 ```math
-\|z\|_\infty<\gamma_1-\beta.
+\|z\|_\infty\lt \gamma_1-\beta.
 ```
 
-The low-part check passes when $`\|r\|_\infty<a-\beta`$. We study an augmented observation containing the indexed $`h`$, challenge $`c`$, the first-check outcome, and the complete histogram of $`r`$ when that check is reached. A fresh uniformly random permutation of the entire $`D`$-coefficient residual vector contains exactly this histogram and additional irrelevant random order.
+The low-part check passes when $`\|r\|_\infty\lt a-\beta`$. We study an augmented observation containing the indexed $`h`$, challenge $`c`$, the first-check outcome, and the complete histogram of $`r`$ when that check is reached. A fresh uniformly random permutation of the entire $`D`$-coefficient residual vector contains exactly this histogram and additional irrelevant random order.
 
 The theorem also covers suppression of the histogram on accepted attempts. Its statistic uses only residual values that force low-part rejection; their counts are known to be zero on an accepted attempt. This observation is proved in the [statistic chapter](boundary_statistic.md#visibility-and-rejection).
 

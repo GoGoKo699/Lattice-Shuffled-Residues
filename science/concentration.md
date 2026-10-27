@@ -20,7 +20,7 @@ The matrix is drawn once and then fixed. Assume $`D\ge4`$ and use zero-based coe
 q=p\alpha+1,\qquad
 \alpha\text{ even},\qquad q>2\alpha,\qquad
 a=\alpha/2,\qquad
-\beta=\eta\tau<a.
+\beta=\eta\tau\lt a.
 ```
 
 Assume $`\gamma_1>\beta`$ and $`L=2(\gamma_1-\beta)-1\le q`$. Each fresh nonce $`y`$ is independently uniform in the integer coefficient box $`(-\gamma_1,\gamma_1]^M`$. The challenge $`c`$ is uniform among signed polynomials with exactly $`\tau`$ nonzero coefficients and is independent of that nonce in the first-attempt model. The fixed secrets have coefficient magnitude at most $`\eta`$.
@@ -86,7 +86,7 @@ a_i\in\{-1,0,1\},\quad\sum_i a_i^2=\tau.
 Let $`P_z`$ be the event that the first check passes:
 
 ```math
-P_z=\{\|y+cs_1\|_\infty<\gamma_1-\beta\},\qquad
+P_z=\{\|y+cs_1\|_\infty\lt \gamma_1-\beta\},\qquad
 p_z=\Pr(P_z)=\left(\frac{L}{2\gamma_1}\right)^M.
 ```
 
@@ -293,7 +293,7 @@ For each of the $`D`$ secret coefficients, let $`\overline Q_j`$ be the mean of 
 
 ### Theorem 2 — Finite-observation identification
 
-Assume $`\tau\ge1`$, $`0<\delta<1`$, that the matrix satisfies the four-coordinate event, and that
+Assume $`\tau\ge1`$, $`0\lt \delta\lt 1`$, that the matrix satisfies the four-coordinate event, and that
 
 ```math
 D\beta\varepsilon\le\frac{1}{16q}.
@@ -312,7 +312,7 @@ N_0:=
 If $`N\ge\lceil N_0\rceil`$, then, with probability at least $`1-\delta`$ over the records,
 
 ```math
-\max_{0\le j<D}|\widehat s_j-s_j|\le\frac38.
+\max_{0\le j\lt D}|\widehat s_j-s_j|\le\frac38.
 ```
 
 In particular, each integer coefficient is uniquely determined by nearest-integer rounding on this event. Including the matrix draw, the total failure probability is at most $`\delta+\zeta_4(\varepsilon)`$. The statistics for different coefficients need not be independent.
@@ -344,11 +344,11 @@ The systematic error after rescaling is bounded by
 \frac{|e_j|}{\theta}\le2qD\beta\varepsilon\le\frac18.
 ```
 
-The sampling error after rescaling is at most $`t_*/\theta=1/4`$. Their sum is $`3/8<1/2`$, proving the assertion. Finally, union with the bad-matrix event adds at most $`\zeta_4(\varepsilon)`$. $`\square`$
+The sampling error after rescaling is at most $`t_*/\theta=1/4`$. Their sum is $`3/8\lt 1/2`$, proving the assertion. Finally, union with the bad-matrix event adds at most $`\zeta_4(\varepsilon)`$. $`\square`$
 
 ### Checking the Bernstein constant
 
-For clarity, the version just used follows directly from a bounded-variable moment-generating-function estimate. If $`\mathbb E Y=0`$, $`|Y|\le b`$, and $`\mathbb E Y^2\le V`$, then, for $`0<\lambda<3/b`$,
+For clarity, the version just used follows directly from a bounded-variable moment-generating-function estimate. If $`\mathbb E Y=0`$, $`|Y|\le b`$, and $`\mathbb E Y^2\le V`$, then, for $`0\lt \lambda\lt 3/b`$,
 
 ```math
 \begin{aligned}

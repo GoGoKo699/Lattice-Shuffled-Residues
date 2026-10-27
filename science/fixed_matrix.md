@@ -14,7 +14,7 @@ A\leftarrow\mathrm{Unif}(R_q^{k\times\ell}),\qquad
 D=kn,\qquad M=\ell n.
 ```
 
-A polynomial is represented by its coefficients of degrees $`0,\ldots,n-1`$. An output position is a pair $`(b,j)`$, where $`0\le b<k`$ is a module row and $`0\le j<n`$ is a coefficient index. Flattening this position gives index $`bn+j`$.
+A polynomial is represented by its coefficients of degrees $`0,\ldots,n-1`$. An output position is a pair $`(b,j)`$, where $`0\le b\lt k`$ is a module row and $`0\le j\lt n`$ is a coefficient index. Flattening this position gives index $`bn+j`$.
 
 Fix sets $`\mathcal S_1,\ldots,\mathcal S_M\subseteq\mathbb F_q`$, each of cardinality $`L`$, where $`1\le L\le q`$. Let $`Z`$ be uniform on their product. Thus its coefficients are independent and uniform on their respective sets. These sets are fixed independently of $`A`$. Intervals are the application of interest, but the proof does not require them.
 
@@ -89,9 +89,9 @@ The notation $`\omega(\log\lambda)`$ means that the ratio to $`\log\lambda`$ ten
 Write $`[f]_0`$ for the constant coefficient of $`f\in R_q`$. The element $`X`$ is invertible, and
 
 ```math
-X^{-j}=-X^{n-j}\quad(1\le j<n),
+X^{-j}=-X^{n-j}\quad(1\le j\lt n),
 \qquad
-[X^{-j}f]_0=f_j\quad(0\le j<n).
+[X^{-j}f]_0=f_j\quad(0\le j\lt n).
 ```
 
 The second identity incorporates the minus sign from $`X^n=-1`$. In particular, the bilinear pairing
@@ -145,7 +145,7 @@ is linear. If its rank is $`\rho(\Delta)`$, uniformity of the coefficients of $`
 
 ### Bounding deficient-rank differences
 
-Suppose $`\rho(\Delta)<r`$. There is a nonzero vector $`\lambda\in\mathbb F_q^r`$ such that the corresponding linear combination of the selected output functionals is zero. Scalar multiples give the same relation, so it suffices to consider $`J_r`$ projective choices.
+Suppose $`\rho(\Delta)\lt r`$. There is a nonzero vector $`\lambda\in\mathbb F_q^r`$ such that the corresponding linear combination of the selected output functionals is zero. Scalar multiples give the same relation, so it suffices to consider $`J_r`$ projective choices.
 
 Fix one such relation. Among the selected output module rows, choose a row $`b`$ on which its coefficients are not all zero. Let $`I_b`$ be the coefficient indices selected in that row, and define
 
@@ -176,7 +176,7 @@ M-\ell\lceil n/r\rceil.
 Lemma 3 bounds the probability of this particular projective relation by $`L^{-\ell\lceil n/r\rceil}`$. Taking the union over the relations gives
 
 ```math
-\Pr_\Delta[\rho(\Delta)<r]
+\Pr_\Delta[\rho(\Delta)\lt r]
 \le J_rL^{-\ell\lceil n/r\rceil}.
 ```
 
@@ -214,10 +214,10 @@ Translation is a bijection that preserves uniform measure. Thus the translated m
 
 ## 5. Conditioning on the first check
 
-Use the [model's notation](model.md): the nonce coefficients are independent uniform integers in $`(-\gamma_1,\gamma_1]`$, the secret coefficients have magnitude at most $`\eta`$, and the signed challenge has weight $`\tau`$. Put $`\beta=\eta\tau<\gamma_1`$ and let
+Use the [model's notation](model.md): the nonce coefficients are independent uniform integers in $`(-\gamma_1,\gamma_1]`$, the secret coefficients have magnitude at most $`\eta`$, and the signed challenge has weight $`\tau`$. Put $`\beta=\eta\tau\lt \gamma_1`$ and let
 
 ```math
-P_z=\{\|y+cs_1\|_\infty<\gamma_1-\beta\},\qquad
+P_z=\{\|y+cs_1\|_\infty\lt \gamma_1-\beta\},\qquad
 L=2(\gamma_1-\beta)-1.
 ```
 
@@ -262,7 +262,7 @@ The calculation uses
 \end{aligned}
 ```
 
-since the expression inside the minimum defining $`\zeta_4`$ is below one in these cases. Conservative consequences are $`\zeta_4<2^{-4157}`$, $`2^{-5947}`$, and $`2^{-8505}`$, respectively.
+since the expression inside the minimum defining $`\zeta_4`$ is below one in these cases. Conservative consequences are $`\zeta_4\lt 2^{-4157}`$, $`2^{-5947}`$, and $`2^{-8505}`$, respectively.
 
 These are probabilities over a uniform module matrix. A short-seed matrix expansion is a different literal distribution and requires the model for its expander stated in [security scope](security_scope.md). The result does not assert that an arbitrary seeded matrix family satisfies the same statistical bound.
 
@@ -296,7 +296,7 @@ For $`\Delta\ne0`$, the two nonzero linear functionals involve independent matri
 
 ### Two coordinates in one module row
 
-Suppose the coefficient indices differ by $`d`$ modulo $`n`$, with $`0<d<n`$. Set
+Suppose the coefficient indices differ by $`d`$ modulo $`n`$, with $`0\lt d\lt n`$. Set
 
 ```math
 g=\gcd(n,d),\qquad

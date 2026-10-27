@@ -100,7 +100,7 @@ Consequently, the probability of choosing a bad matrix is paid once at key gener
 
 A useful way to read the hybrid material is to ask what the reduction can sample while it embeds its one challenge. In this project, all records refer to the same public key and hidden witness. With fresh nonces and the model's independent challenges, records are independent conditional on the full key; averaging over the hidden key can still leave correlations between records.
 
-For example, take a hidden fair sign $`S`$, a number $`0<\epsilon<1/2`$, and conditionally independent signs $`X_i`$ with
+For example, take a hidden fair sign $`S`$, a number $`0\lt \epsilon\lt 1/2`$, and conditionally independent signs $`X_i`$ with
 
 ```math
 \Pr[X_i=S\mid S]=\frac12+\epsilon.
