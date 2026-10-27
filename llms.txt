@@ -1,0 +1,33 @@
+# Lattice Shuffled Residues
+
+> A theoretical study of histogram correlations in a shuffled lattice-signature observation model, with a fixed-public-matrix theorem, explicit moments and concentration, and a bounded-witness consequence for repeated-view simulation.
+
+## Entry points
+
+- [Project overview](README.md): scientific question, principal results, quantitative scale, reproduction, and scope.
+- [Connected scientific account](science/README.md): proof dependencies and the role of each distribution.
+- [Related work](references/RELATED_WORK.md): closest comparisons, original and corrected source versions, and unresolved full-text overlap checks.
+- [Bibliography](references/references.bib): structured primary-source records.
+
+## Questions and authoritative pages
+
+- What information is visible? Read [Model](science/model.md), especially the enlarged view, exact first-check conditioning, and fresh first-attempt strategy.
+- Why can an anonymous histogram retain a secret-dependent correlation? Read [Boundary statistic](science/boundary_statistic.md), equations (B1)–(B10).
+- Is the public matrix redrawn for each record? No. Read [Fixed public matrix](science/fixed_matrix.md) for a one-time matrix draw and simultaneous control of all translations of one fixed product box.
+- Why are only four coordinates needed? Read [Concentration](science/concentration.md): the mean uses two-coordinate marginals and the second moment uses at most four.
+- What probability and observation count are proved? Read the theorem and parameter table in [Concentration](science/concentration.md).
+- What does public-key simulation imply? Read [Security scope](science/security_scope.md) for any-witness validation, full-key rank exceptions, joint simulation, decision-assumption conditions, exact arithmetic, storage, and signer costs.
+- What is wrong with the particular one-transcript replacement? Read [Replacement marginal](science/sampler_marginal.md) for the exact scalar probability gap and its local repair.
+- How are calculations reproduced? Read [Verification](verification/README.md), run [check_identities.py](verification/check_identities.py), and compare [results.json](verification/results.json).
+
+## Essential distinctions
+
+The genuine experiment fixes one public matrix and one bounded secret across observations. Independent uniform output coordinates are a comparison law used to calculate moments, not a claim about the full genuine output vector. The specific corrected-SUCRE replacement sampler is a third distribution with a separate scalar discrepancy.
+
+The residual histogram is a complete noiseless observation in an enlarged proof model. The statistical theorem does not supply a physical trace-acquisition argument. The full-key completion uses an uncompressed public relation; compressed verification keys require additional information.
+
+Accepted first-check-passing records retain their centered contribution. Only first-check failures contribute zero by definition. The displayed observation counts are conservative sufficient analytical bounds and are extremely large.
+
+A failed hardness premise and a missing hypothesis in a proof composition have different logical effects. The repeated-view obstruction is conditional on bounded-witness hardness at the simulator's and postprocessor's combined resource budget.
+
+Prior work already combines shuffled information with indexed public data. Attribute that general principle to the sources identified in the related-work account. The project's contribution is its specified residual/high-bit correlation and the theorem that supports repeated observations under one fixed matrix.
